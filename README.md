@@ -10,23 +10,23 @@ Circle works nearly as good while tangnet method is bad
  Calclating circle fit is based on method from https://github.com/scipy/scipy-cookbook/blob/master/ipython/Least_Squares_Circle.ipynb.
  It comes from the old scipy wiki which has been archived and the circles least squares circle method
  
- Mehtods are named with young-laplace (yl) for one image, young-lpalace glob (ylg) for method 
- using multiple images. Cicel method is named the same with circle method for one image (cm) and
+ Mehtods are named with young-laplace (yl) for one image, young-laplace glob (ylg) for method 
+ using multiple images. Circle method is named the same with circle method for one image (cm) and
  circle method glob (cmg) for multiple images in one folder
  
 what to change in code for running it:
 
-ylp and ylpg both contain constants density, gravity, surface tensiona and conversion from
+ylp and ylpg both contain constants density, gravity, surface tension and conversion from
 metres to pixels. these are currently from the F.Behroozi paper. found in lines 21-25 
 
 select file directory and name of file to write data to for ylpg lines 27, 28 and cmg lines 19,20
 
 select pixel threshold to reduce noise in image cm line 44, cmg line 32, ylp line 38 and ylpg line 40
 
-selct box area of intrest which droplet exists in  form (x1,y1,x2,y2) with 0,0 in top left corner of 
+selct box area of intrest which droplet exists in  from (x1,y1,x2,y2) with 0,0 in top left corner of 
 image and coordinated as top left to bottom right for the box. cm line 55, cmg line 43, ylp line 49 and ylpg line 51
 
-select file to run for cm line 217 and ylp line 431. Allows most image file types (tested with Jpeg, Tiff and png) does not work with bmp type
+select file to run for cm line 217 and ylp line 431. Allows most image file types tested with jpeg, TIFF and png, does not work with bmp type
 
 for ylpg line 163 and ylp line 215 the method only loops 10000 time to intgrate down the edge of the droplet, this may need to 
 be changed if the image is large or the droplet is large.
