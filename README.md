@@ -5,6 +5,7 @@ README file for Aoife baskill Master Project - Image Anyalysis for a Mobile Lab
 
 Best method for calulating is young-Laplace method
 Circle works nearly as good while tangnet method is bad
+Uses pillow package which may need to be downloaded
 
  For Young-Laplace method used inthegration along edge based on paper by F. Behroozi DOI:10.1119/1.5078512
  Calclating circle fit is based on method from https://github.com/scipy/scipy-cookbook/blob/master/ipython/Least_Squares_Circle.ipynb.
