@@ -1,3 +1,9 @@
+"""
+Code for finding contact angle of droplet by fitting the edge as a circle
+Masters project by Aoife Baskill
+requires image input
+
+"""
 import numpy as np
 import math
 import matplotlib.pyplot as plt 
@@ -16,14 +22,13 @@ def get_image(image_name):
     image = Image.open( image_name ).convert("L")
     #image.show()
     
-    
-    
     #finds edges of the objects in the image.
     im_edge = image.filter(ImageFilter.FIND_EDGES)
     
     image_array = np.asarray(im_edge)
     width, height = image_array.shape
     
+    #set image data about pixel colour as a histogram 
     listh=[]
     for i in range (width):
         for j in range (height):
@@ -253,3 +258,4 @@ chi=chi_fit(points_x, points_y,circle_height, xc_2, yc_2)
 
 stop = timeit.default_timer()
 print('Time: ', stop - start) 
+
